@@ -1,0 +1,72 @@
+.news-container {
+  max-width: 50%;
+  width: 100%;
+  padding: 0.625rem;
+  display: block;
+
+  &:hover {
+    .news-image:before {
+      background-color: rgba(0,0,0,.5)
+    }
+  }
+
+  @media only screen and (max-width: 50rem){
+    max-width: 100%;
+  }
+
+  .news-image {
+    width: 100%;
+    max-width: 26rem;
+    height: 12.5rem;
+    margin: auto;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    will-change: background-color;
+
+    &:before {
+      content: '';
+      display: block;
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transition: background-color 0.2s linear;
+    }
+
+    @media only screen and (max-width: 50rem){
+      max-width: 100%;
+    }
+  }
+
+  .news-section {
+    max-width: 20.625rem;
+    margin: 0 auto;
+    padding: .5rem;
+    text-align: left;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+    transform: translateY(-50%);
+
+    @media only screen and (max-width: 50rem){
+      max-width: 90%;
+    }
+
+    .news-title {
+      margin-bottom: .8rem;
+      font-size: .825rem;
+    }
+  }
+
+  .news-footer {
+    font-size: .5rem;
+    display: flex;
+
+    @media only screen and (max-width: 50rem){
+      font-size: .6rem;
+    }
+  }
+}
